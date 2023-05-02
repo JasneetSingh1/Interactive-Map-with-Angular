@@ -1,0 +1,6 @@
+path{
+    transition: all 100ms ease;
+}
+path:hover{
+    fill: red;
+}
