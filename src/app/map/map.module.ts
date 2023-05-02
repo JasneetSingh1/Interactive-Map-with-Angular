@@ -11,7 +11,8 @@ import { MapMapComponent } from './map-map/map-map.component';
   ],
   imports: [
     CommonModule,
-    MapRoutingModule
-  ]
+    MapRoutingModule,
+  ],
+  
 })
 export class MapModule { }
