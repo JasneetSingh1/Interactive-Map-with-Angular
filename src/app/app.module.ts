@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { MapModule } from './map/map.module';
 import { DetailModule } from './detail/detail.module';
 
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,8 @@ import { DetailModule } from './detail/detail.module';
     BrowserModule,
     AppRoutingModule,
     MapModule,
-    DetailModule
+    DetailModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
