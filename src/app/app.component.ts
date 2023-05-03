@@ -6,7 +6,7 @@ import { MapMapComponent } from './map/map-map/map-map.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'interactive-map-angular';
+  title = 'Interactive World Map';
 
   constructor(){
     window.addEventListener("load", function(){

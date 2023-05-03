@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapDetailComponent } from './map-detail.component';
+import { DetailDetailComponent } from './detail-detail.component';
 
-describe('MapDetailComponent', () => {
-  let component: MapDetailComponent;
-  let fixture: ComponentFixture<MapDetailComponent>;
+describe('DetailDetailComponent', () => {
+  let component: DetailDetailComponent;
+  let fixture: ComponentFixture<DetailDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MapDetailComponent ]
+      declarations: [ DetailDetailComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MapDetailComponent);
+    fixture = TestBed.createComponent(DetailDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

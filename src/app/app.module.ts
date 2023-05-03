@@ -5,17 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MapModule } from './map/map.module';
-import { MapDetailComponent } from './map-detail/map-detail.component';
+import { DetailModule } from './detail/detail.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MapModule
+    MapModule,
+    DetailModule
   ],
   providers: [],
   bootstrap: [AppComponent],

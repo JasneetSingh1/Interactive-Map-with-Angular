@@ -5,6 +5,8 @@ import { MapRoutingModule } from './map-routing.module';
 import { MapMapComponent } from './map-map/map-map.component';
 
 
+
+
 @NgModule({
   declarations: [
     MapMapComponent
@@ -12,7 +14,11 @@ import { MapMapComponent } from './map-map/map-map.component';
   imports: [
     CommonModule,
     MapRoutingModule,
+    
   ],
+  exports: [
+    MapMapComponent
+  ]
   
 })
 export class MapModule { }
