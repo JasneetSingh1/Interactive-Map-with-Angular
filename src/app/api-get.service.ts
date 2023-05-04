@@ -13,17 +13,22 @@ export class ApiGetService {
     return this._http.get(`http://api.worldbank.org/v2/country/${countryId}?format=json`);
   }
 
-  whatCountry()
+  whatCountry(onCountryChange: { (countryId: any): void; (arg0: string): void; })
   {
-    const pathElements = document.querySelectorAll("svg path");
-    var countryId
-      pathElements.forEach((pathElement) =>{
-       
-        pathElement.addEventListener('mouseover', function(){
-          countryId = pathElement.id
-          return
-        })
-      })
-      return countryId
-  }
+    return new Promise((resolve, reject) => {
+      const pathElements = document.querySelectorAll("svg path");
+  
+      pathElements.forEach((pathElement) => {
+        pathElement.addEventListener("mouseover", () => {
+          const countryId = pathElement.id;
+          onCountryChange(countryId);
+        });
+      });
+    });
+}
+
+
+
+
+
 }

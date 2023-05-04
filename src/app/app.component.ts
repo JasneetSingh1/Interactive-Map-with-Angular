@@ -12,55 +12,51 @@ export class AppComponent {
   newdata:any;
   countryId:any
 
-  
-  
-
   constructor(private _apiservice:ApiGetService){}
-  //   var countryId: any;
-  //   window.addEventListener("load", function(){
-  //   const pathElements = document.querySelectorAll("svg path");
-    
-
-  //   pathElements.forEach(function(pathElement){
-  //     pathElement.addEventListener('mouseover', function(){
-  //        countryId = pathElement.id
-  //        console.log(countryId)
-         
-  //     })
-    
-      
-  //   })
-    
-
-  // })
-
-
 
   
    ngOnInit()
    {
-    window.addEventListener("load", () => {
-      const pathElements = document.querySelectorAll("svg path");
-    
-      pathElements.forEach((pathElement) => {
-        pathElement.addEventListener("mouseover", () => {
-          const countryId = pathElement.id;
-          // const country = this._apiservice.whatCountry();
-    
-          this._apiservice.getApiData(countryId).subscribe((res: any) => {
-             this.newdata = res[1];
-          });
-        });
-      });
-    });
-    
-    }
+      window.addEventListener("load", () => {
 
+            this._apiservice.whatCountry((countryId: any) =>{
+              this._apiservice.getApiData(countryId).subscribe((res: any) => {
+                this.newdata = res[1];
+              });
+            })
+      });
+    
+    };
   }
+  
 
    
 
 
+ /**
+  * Another way of transmitting data from the Api to the HTML element
+  * This way is without using the whatCountry() function
+  */
+  // ngOnInit()
+  // {
+  //    window.addEventListener("load", () => {
+  //      const pathElements = document.querySelectorAll("svg path");
+     
+  //      pathElements.forEach((pathElement) => {
+
+  //        pathElement.addEventListener("mouseover", () => {
+
+  //          const countryId = pathElement.id;
+  //          
+     
+  //          this._apiservice.getApiData(countryId).subscribe((res: any) => {
+  //            this.newdata = res[1];
+  //          });
+  //        });
+  //      });
+  //    });
+   
+  //  }
 
          
   
