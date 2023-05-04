@@ -8,4 +8,5 @@ import { ApiGetService } from 'src/app/api-get.service';
 })
 export class DetailDetailComponent {
 
+  
 }

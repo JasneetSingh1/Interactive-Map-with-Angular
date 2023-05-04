@@ -6,7 +6,28 @@
             <app-map-map></app-map-map>
         </div>
         <div class="col d-flex justify-content-around  ">
-            <app-detail-detail></app-detail-detail>
+            <div class="country-container text-center   ">
+                <div class="border rounded-top shadow-sm p-5 mb-5 bg-white rounded">
+                    <h1 *ngIf="newdata" class="country-name text-center display-4">{{newdata[0].name}}</h1>
+                    <h1 *ngIf="!newdata" class="country-name text-center display-4">Countries</h1>  
+                    <div class="text-center">
+                        <div *ngIf="newdata" class="country-region">Region: {{newdata[0].region.value}}</div>
+                        <div *ngIf="!newdata" class="country-region">Regions: </div>
+
+                        <div *ngIf="newdata" class="country-capital">Capital: {{newdata[0].capitalCity}} </div>
+                        <div *ngIf="!newdata" class="country-capital">Capitals:  </div>
+
+                        <div *ngIf="newdata"class="country-income">Income Level: {{newdata[0].incomeLevel.value}} </div>
+                        <div *ngIf="!newdata"class="country-income">Income Levels:  </div>
+
+                        <div *ngIf="newdata"class="country-longitude">Longitude: {{newdata[0].longitude}} </div>
+                        <div *ngIf="!newdata"class="country-longitude">Longitudes:  </div>
+
+                        <div *ngIf="newdata"class="country-latitude">Latitude: {{newdata[0].latitude}}</div>
+                        <div *ngIf="!newdata"class="country-latitude">Latitudes: </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -14,3 +35,4 @@
 
 
 
+<!-- <app-detail-detail></app-detail-detail> -->

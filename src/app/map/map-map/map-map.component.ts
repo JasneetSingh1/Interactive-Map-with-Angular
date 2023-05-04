@@ -9,28 +9,38 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MapMapComponent {
 
-  constructor(private _http:HttpClient) { 
+  constructor(private HttpClient:HttpClient) { 
 
   //   function getApiData(this: any, countryId: string)
   // {
   //   return this._http.get(`http://api.worldbank.org/v2/country/${countryId}?format=json`);
   // }
+      
+      
 
-  window.addEventListener("load", function(){
-    const pathElements = document.querySelectorAll("svg path");
+      window.addEventListener("load", function(){
+        const pathElements = document.querySelectorAll("svg path");
 
-    pathElements.forEach(function(pathElement){
-      pathElement.addEventListener('mouseover', function(){
-        var countryId = pathElement.id
-        // getApiData(countryId)
-        console.log(pathElement.id)
+        pathElements.forEach(function(pathElement){
+          pathElement.addEventListener('mouseover', function(){
+            var countryId = pathElement.id
+            // const countryData = _http.get(`http://api.worldbank.org/v2/country/${countryId}?format=json`)
+
+            // console.log(countryData)
+            return countryId;
+          })
+        
+         
+
+        })
+       
       })
-    })
-
-
-  })
     
-}
+     
+      
+
+
+  }
   //   window.addEventListener("load", function(){
   //   this.window.addEventListener('mouseover', function(){
   //     var PathElements  = document.getElementsByTagName('path'); 
