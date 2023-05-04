@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MapModule } from './map/map.module';
-import { DetailModule } from './detail/detail.module';
+
 
 import {HttpClientModule} from '@angular/common/http';
 
@@ -17,7 +17,6 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     MapModule,
-    DetailModule,
     HttpClientModule
   ],
   providers: [],

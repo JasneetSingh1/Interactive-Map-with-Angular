@@ -1,15 +1,16 @@
 
 <h1 class="display-2 text-center m-5 font-weight-bold">{{title}}</h1>
-<div class="container m-5 p-2 d-inline ">
+<div class="container  p-3 d-inline  ">
     <div class=" row d-flex  align-items-center ">
-        <div class="col mw-100  ">
+        <div class="col ">
             <app-map-map></app-map-map>
         </div>
-        <div class="col d-flex justify-content-around  ">
-            <div class="country-container text-center   ">
+        <div class="col   ">
+            <div class="country-container text-center d-flex justify-content-around   ">
                 <div class="border rounded-top shadow-sm p-5 mb-5 bg-white rounded">
                     <h1 *ngIf="newdata" class="country-name text-center display-4">{{newdata[0].name}}</h1>
-                    <h1 *ngIf="!newdata" class="country-name text-center display-4">Countries</h1>  
+                    <h1 *ngIf="!newdata" class="country-name text-center display-4">Countries</h1> 
+
                     <div class="text-center">
                         <div *ngIf="newdata" class="country-region">Region: {{newdata[0].region.value}}</div>
                         <div *ngIf="!newdata" class="country-region">Regions: </div>
@@ -35,4 +36,3 @@
 
 
 
-<!-- <app-detail-detail></app-detail-detail> -->

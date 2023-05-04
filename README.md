@@ -41,7 +41,7 @@ Created a service that uses an HTTP client to make HTTP calls and includes:
 * Uses a callback function that is called everytime the �mouseover� event is triggered.
 * Callback function �onCountryChange� is passed as a parameter to the �whatCountry()� method. This function is called every time the �mouseover� event is triggered on an SVG path element, and it�s passed the �countryId� value as an argument.
 
-# SVG MAP
+# SVG Map
 
 The project uses an SVG map from:
 http://innovsandbox.space/map.html
